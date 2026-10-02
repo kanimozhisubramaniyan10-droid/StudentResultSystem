@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f1ff;
+    color: #29243d;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background: #7c5cff;
+    color: white;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav button {
+    border: none;
+    background: #eee9ff;
+    color: #5b42c7;
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover {
+    background: #7c5cff;
+    color: white;
+}
+
+/* Main */
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Cards */
+.card,
+.welcome {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.welcome {
+    text-align: center;
+    padding: 70px 30px;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* Form */
+.card h2 {
+    margin-bottom: 25px;
+    color: #5b42c7;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8d3e8;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7c5cff;
+}
+
+.marks-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+/* Buttons */
+.main-btn,
+.submit-btn,
+.search-btn {
+    border: none;
+    background: #7c5cff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.main-btn:hover,
+.submit-btn:hover,
+.search-btn:hover {
+    background: #6345e8;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+th {
+    background: #eee9ff;
+    color: #5b42c7;
+}
+
+tr:hover {
+    background: #faf9ff;
+}
+
+/* Search */
+#searchResult {
+    margin-top: 25px;
+}
+
+.search-card {
+    background: #f7f5ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: white;
+    color: #666;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .marks-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

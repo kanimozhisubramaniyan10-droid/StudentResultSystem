@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Result Management System</h1>
+        <p>Manage and view student academic results easily</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('add')">Add Student</button>
+        <button onclick="showSection('view')">View Results</button>
+        <button onclick="showSection('search')">Search</button>
+    </nav>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="section active">
+            <div class="welcome">
+                <h2>Welcome</h2>
+                <p>
+                    Student Result Management System helps to add,
+                    view and search student academic results.
+                </p>
+
+                <button class="main-btn" onclick="showSection('add')">
+                    Add Student Result
+                </button>
+            </div>
+        </section>
+
+        <!-- ADD STUDENT -->
+        <section id="add" class="section">
+            <div class="card">
+                <h2>Add Student Result</h2>
+
+                <form id="studentForm">
+
+                    <label>Roll Number</label>
+                    <input type="text" id="rollNo" required>
+
+                    <label>Student Name</label>
+                    <input type="text" id="studentName" required>
+
+                    <label>Class</label>
+                    <input type="text" id="className" required>
+
+                    <div class="marks-grid">
+
+                        <div>
+                            <label>Tamil</label>
+                            <input type="number" id="tamil" min="0" max="100" required>
+                        </div>
+
+                        <div>
+                            <label>English</label>
+                            <input type="number" id="english" min="0" max="100" required>
+                        </div>
+
+                        <div>
+                            <label>Maths</label>
+                            <input type="number" id="maths" min="0" max="100" required>
+                        </div>
+
+                        <div>
+                            <label>Science</label>
+                            <input type="number" id="science" min="0" max="100" required>
+                        </div>
+
+                        <div>
+                            <label>Social Science</label>
+                            <input type="number" id="social" min="0" max="100" required>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Save Result
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- VIEW RESULTS -->
+        <section id="view" class="section">
+            <div class="card">
+                <h2>All Student Results</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Total</th>
+                                <th>Percentage</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="resultTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEARCH -->
+        <section id="search" class="section">
+            <div class="card">
+                <h2>Search Student</h2>
+
+                <input
+                    type="text"
+                    id="searchRoll"
+                    placeholder="Enter Roll Number"
+                >
+
+                <button class="search-btn" onclick="searchStudent()">
+                    Search
+                </button>
+
+                <div id="searchResult"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Result Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
